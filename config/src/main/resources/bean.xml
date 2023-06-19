@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+   <context:component-scan base-package="nacosconfig.config"></context:component-scan>
+
+<!--    根据变量名称注入-->
+<!--   <bean id="persion" class="nacosconfig.config.test.Persion" autowire="byName">-->
+<!--&lt;!&ndash;      <property name="student" ref="student"></property>&ndash;&gt;-->
+<!--      <property name="name" value="zhangsan"></property>-->
+<!--   </bean>-->
+
+<!--   <bean id="student" class="nacosconfig.config.test.Student"></bean>-->
+
+<!--    setter方法-->
+<!--    <bean id="persion" class="nacosconfig.config.test.Persion" autowire="byType">-->
+<!--        &lt;!&ndash;      <property name="student" ref="student"></property>&ndash;&gt;-->
+<!--        <property name="name" value="zhangsan"></property>-->
+<!--    </bean>-->
+
+<!--    构造方法-->
+<!--    <bean id="Student3" class="nacosconfig.config.test.Student"></bean>-->
+
+    <bean id="persion" class="nacosconfig.config.test.Persion" autowire="no">
+              <property name="student" ref="student"></property>
+        <property name="name" value="zhangsan"></property>
+    </bean>
+
+    <bean id="student" class="nacosconfig.config.test.Student"></bean>
+
+<!--    <bean id="test" class="nacosconfig.config.test.interf.ITest" abstract="true"></bean>-->
+<!--   <bean id="loginService" class="com.ssm01.spring.service.LoginService">-->
+<!--      <property name="name" value="haha"></property>-->
+<!--      <property name="strArr" >-->
+<!--         <list>-->
+<!--              <value>aaa</value>-->
+<!--              <value>bbb</value>-->
+<!--         </list>-->
+<!--      </property>-->
+<!--      <property name="strList">-->
+<!--         <list>-->
+<!--            <value>aaa</value>-->
+<!--            <value>bbb</value>-->
+<!--         </list>-->
+<!--      </property>-->
+<!--      <property name="strSet">-->
+<!--         <list>-->
+<!--            <value>aaa</value>-->
+<!--            <value>bbb</value>-->
+<!--         </list>-->
+<!--      </property>-->
+<!--      <property name="strMap">-->
+<!--         <map>-->
+<!--            <entry key="testa" value="aaa"></entry>-->
+<!--            <entry key="testb">-->
+<!--               <value>bbbb</value>-->
+<!--            </entry>-->
+<!--         </map>-->
+<!--      </property>-->
+<!--      <property name="properities">-->
+<!--         <props>-->
+<!--            <prop key="testa">aaa</prop>-->
+<!--            <prop key="testb">bbb</prop>-->
+<!--         </props>-->
+<!--      </property>-->
+<!--   </bean>-->
+
+
+
+
+</beans>
